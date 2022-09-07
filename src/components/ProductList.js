@@ -8,8 +8,8 @@ export const ProductList = ({ navigation }) => {
     //flastlist of products
 
     const getProducts = async () => {
-        console.log(Config.API_URL)
-        axios.get(`https://vp-ecomm-server.herokuapp.com/api/products/`)
+        // console.log(Config.API_URL)
+        axios.get(`${Config.API_URL}/api/products/`)
             .then((res) => {
                 console.log(res.data)
             })
