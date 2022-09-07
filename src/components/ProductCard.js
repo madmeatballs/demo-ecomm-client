@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Pressable } from 'react-native';
 import { View, Center, Text, Button, VStack, HStack } from 'native-base';
+import { responsiveHeight } from 'react-native-responsive-dimensions';
 
 export const ProductCard = (props) => {
 //product card for product list showing product name, price, category, and add to cart button
@@ -36,9 +37,12 @@ const styles = StyleSheet.create({
         paddingVertical: 5,
         paddingHorizontal: 10,
         justifyContent: 'space-between',
+        height: responsiveHeight(15),
+        width: '80%',
+        alignSelf: 'center',
     },
     details: {
         width: '60%',
-        // borderWidth: 1,
+        alignSelf: 'center',
     }
 });

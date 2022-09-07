@@ -37,7 +37,7 @@ export const ProductList = ({ navigation }) => {
 
     return (
         <View style={{
-            width: '80%',
+            width: '100%',
             height: '95%',
             alignSelf: 'center',
             justifyContent: 'center',
