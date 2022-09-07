@@ -8,14 +8,14 @@ import { Routes } from '../navigation/Routes';
 
 export const Providers = () => {
     return (
-        <GestureHandlerRootView style={{ flex: 1 }} >
-            <SafeAreaProvider>
+        <SafeAreaProvider>
+            <GestureHandlerRootView style={{ flex: 1 }} >
                 <NativeBaseProvider>
                     <ReduxProvider store={store}>
                         <Routes />
                     </ReduxProvider>
                 </NativeBaseProvider>
-            </SafeAreaProvider>
-        </GestureHandlerRootView>
+            </GestureHandlerRootView>
+        </SafeAreaProvider>
     );
 };

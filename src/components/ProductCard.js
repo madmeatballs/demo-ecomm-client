@@ -1,25 +1,44 @@
 import React from 'react';
 import { StyleSheet, Pressable } from 'react-native';
-import { View, Center, Text, Button, VStack } from 'native-base';
+import { View, Center, Text, Button, VStack, HStack } from 'native-base';
 
 export const ProductCard = (props) => {
 //product card for product list showing product name, price, category, and add to cart button
     const { details } = props;
 
+    // console.log('PC', details.category.name)
+
     return (
-        <VStack>
-            <Text>
-                {details.name}
-            </Text>
-            <Text>
-                {details.price}
-            </Text>
-            <Text>
-                {details.category}
-            </Text>
+        <HStack style={styles.container}>
+            <VStack style={styles.details}>
+                <Text>
+                    Name: {details.name}
+                </Text>
+                <Text>
+                    Price: ${details.price}
+                </Text>
+                <Text>
+                    Category: {details.category.name}
+                </Text>
+            </VStack>
             <Button>
-                Add To Cart
+                <Text style={styles.text}>Add to Cart</Text>
             </Button>
-        </VStack>
+        </HStack>
     )
 };
+
+const styles = StyleSheet.create({
+    container: {
+        borderWidth: 1,
+        marginVertical: 5,
+        marginHorizontal: 10,
+        paddingVertical: 5,
+        paddingHorizontal: 10,
+        justifyContent: 'space-between',
+    },
+    details: {
+        width: '60%',
+        // borderWidth: 1,
+    }
+});
